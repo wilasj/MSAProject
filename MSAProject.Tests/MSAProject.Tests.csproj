@@ -2,11 +2,19 @@
     <ItemGroup>
         <PackageReference Include="coverlet.collector" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" />
+        <PackageReference Include="NetArchTest.Rules" />
+        <PackageReference Include="Shouldly" />
         <PackageReference Include="xunit" />
         <PackageReference Include="xunit.runner.visualstudio" />
     </ItemGroup>
 
     <ItemGroup>
         <Using Include="Xunit"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MSAProject.Application\MSAProject.Application.csproj" />
+      <ProjectReference Include="..\MSAProject.Domain\MSAProject.Domain.csproj" />
+      <ProjectReference Include="..\MSAProject.Infrastructure\MSAProject.Infrastructure.csproj" />
     </ItemGroup>
 </Project>
