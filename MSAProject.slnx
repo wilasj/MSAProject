@@ -3,7 +3,7 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
-  <Project Path="MSAProject.API/MSAProject.API.csproj" />
+  <Project Path="MSAProject.Api/MSAProject.Api.csproj" />
   <Project Path="MSAProject.Application/MSAProject.Application.csproj" />
   <Project Path="MSAProject.Domain/MSAProject.Domain.csproj" />
   <Project Path="MSAProject.Infrastructure/MSAProject.Infrastructure.csproj" />
