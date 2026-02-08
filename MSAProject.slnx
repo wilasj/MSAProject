@@ -1,2 +1,7 @@
 <Solution>
+  <Project Path="MSAProject.API/MSAProject.API.csproj" />
+  <Project Path="MSAProject.Application/MSAProject.Application.csproj" />
+  <Project Path="MSAProject.Domain/MSAProject.Domain.csproj" />
+  <Project Path="MSAProject.Infrastructure/MSAProject.Infrastructure.csproj" />
+  <Project Path="MSAProject.Tests/MSAProject.Tests.csproj" />
 </Solution>
