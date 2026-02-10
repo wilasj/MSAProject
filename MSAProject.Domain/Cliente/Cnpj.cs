@@ -6,7 +6,12 @@ namespace MSAProject.Domain.Cliente;
 public sealed class Cnpj(string valor)
 {
     public string Valor { get; private set; } = valor;
-    private static string NormalizarCnpj(string cnpj) => Regex.Replace(cnpj, @"[^\d]", "");
+    
+    //Esse regex retira somente pontuações, e não letras. Fiz isso pra poder conseguir validar corretamente
+    //em casos onde o tamanho é correto, mas existem letras.
+    private static string RetirarPontuacoes(string cnpj) => Regex.Replace(cnpj, @"[\p{P}]", "");
+
+    public static string NormalizarCnpj(string cnpj) => Regex.Replace(cnpj, @"[^\d]", "");
     
     public static Resultado<Cnpj> Criar(string? cnpj)
     {
@@ -15,13 +20,13 @@ public sealed class Cnpj(string valor)
             return Resultado.Falha<Cnpj>(CnpjErros.CnpjVazio);
         }
         
-        string cnpjNormalizado = NormalizarCnpj(cnpj.Trim());
+        string cnpjSemPontuacao = RetirarPontuacoes(cnpj.Trim());
 
-        if (string.IsNullOrEmpty(cnpjNormalizado))
+        if (!cnpjSemPontuacao.All(char.IsDigit))
         {
             return Resultado.Falha<Cnpj>(CnpjErros.CnpjInvalido);
         }
 
-        return cnpjNormalizado.Length != 14 ? Resultado.Falha<Cnpj>(CnpjErros.CnpjMenor) : Resultado.Ok(new Cnpj(cnpjNormalizado));
+        return cnpjSemPontuacao.Length != 14 ? Resultado.Falha<Cnpj>(CnpjErros.CnpjMenor) : Resultado.Ok(new Cnpj(cnpjSemPontuacao));
     }
 }
