@@ -5,6 +5,7 @@
   </Folder>
   <Project Path="MSAProject.Api/MSAProject.Api.csproj" />
   <Project Path="MSAProject.Application/MSAProject.Application.csproj" />
+  <Project Path="MSAProject.Common/MSAProject.Common.csproj" />
   <Project Path="MSAProject.Domain/MSAProject.Domain.csproj" />
   <Project Path="MSAProject.Infrastructure/MSAProject.Infrastructure.csproj" />
   <Project Path="MSAProject.Tests/MSAProject.Tests.csproj" />
