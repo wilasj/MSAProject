@@ -7,7 +7,7 @@ public class CnpjTests
     [Theory]
     [InlineData(null)]
     [InlineData("")]
-    public void CnpjVazioOuNulo_DeveRetornar_Erro(string cnpj)
+    public void CnpjVazioOuNulo_DeveRetornar_Erro(string? cnpj)
     {
         var resultado = Cnpj.Criar(cnpj);
         
