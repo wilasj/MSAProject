@@ -12,7 +12,7 @@ public class CnpjTests
         var resultado = Cnpj.Criar(cnpj);
         
         Assert.False(resultado.IsSucesso);
-        Assert.Equal(resultado.Erro, CnpjErros.CnpjVazio);
+        Assert.Equal(CnpjErros.CnpjVazio, resultado.Erro);
     }
 
     [Theory]
@@ -23,7 +23,7 @@ public class CnpjTests
         var resultado = Cnpj.Criar(cnpj);
 
         Assert.False(resultado.IsSucesso);
-        Assert.Equal(resultado.Erro, CnpjErros.CnpjInvalido);
+        Assert.Equal(CnpjErros.CnpjInvalido, resultado.Erro);
     }
 
     [Fact]
@@ -33,6 +33,6 @@ public class CnpjTests
         var resultado = Cnpj.Criar(cnpj);
         
         Assert.False(resultado.IsSucesso);
-        Assert.Equal(resultado.Erro, CnpjErros.CnpjMenor);
+        Assert.Equal(CnpjErros.CnpjMenor, resultado.Erro);
     }
 }
