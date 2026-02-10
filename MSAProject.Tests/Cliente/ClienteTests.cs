@@ -1,4 +1,5 @@
 using MSAProject.Domain;
+using MSAProject.Domain.Cliente;
 
 namespace MSAProject.Tests.Cliente;
 

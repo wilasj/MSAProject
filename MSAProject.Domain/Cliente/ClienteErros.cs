@@ -1,6 +1,6 @@
 using MSAProject.Common;
 
-namespace MSAProject.Domain;
+namespace MSAProject.Domain.Cliente;
 
 public static class ClienteErros
 {
