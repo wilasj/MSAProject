@@ -8,14 +8,14 @@ public sealed class Cnpj(string valor)
     public string Valor { get; private set; } = valor;
     private static string NormalizarCnpj(string cnpj) => Regex.Replace(cnpj, @"[^\d]", "");
     
-    public static Resultado<Cnpj> Criar(string cnpj)
+    public static Resultado<Cnpj> Criar(string? cnpj)
     {
         if (string.IsNullOrEmpty(cnpj))
         {
             return Resultado.Falha<Cnpj>(CnpjErros.CnpjVazio);
         }
         
-        var cnpjNormalizado = NormalizarCnpj(cnpj.Trim());
+        string cnpjNormalizado = NormalizarCnpj(cnpj.Trim());
 
         if (string.IsNullOrEmpty(cnpjNormalizado))
         {
