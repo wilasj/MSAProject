@@ -1,6 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk" />
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
     <ProjectReference Include="..\MSAProject.Common\MSAProject.Common.csproj" />
+    <ProjectReference Include="..\MSAProject.Domain\MSAProject.Domain.csproj" />
   </ItemGroup>
 </Project>
