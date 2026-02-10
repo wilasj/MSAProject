@@ -10,7 +10,7 @@ namespace MSAProject.Tests.Arquitetura;
 public class ArquiteturaTests
 {
     private static readonly Assembly AssemblyDominio = typeof(Cnpj).Assembly;
-    private static readonly Assembly AssemblyAplicacao = typeof(ICommandHandler).Assembly;
+    private static readonly Assembly AssemblyAplicacao = typeof(ICommand).Assembly;
     private static readonly Assembly AssemblyInfraestrutura = typeof(DependencyInjection).Assembly;
     
     public static IEnumerable<object[]> CamadasIncompativeis => new List<object[]>
