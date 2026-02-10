@@ -16,21 +16,14 @@ public sealed class Cliente
         Ativo = ativo;
     }
 
-    public static Resultado<Cliente> Criar(string nome, string cnpj)
+    public static Resultado<Cliente> Criar(string nome, Cnpj cnpj)
     {
         if (string.IsNullOrEmpty(nome))
         {
             return Resultado.Falha<Cliente>(ClienteErros.NomeVazio);
         }
 
-        var resultadoCnpj = Cnpj.Criar(cnpj);
-
-        if (!resultadoCnpj.IsSucesso)
-        {
-            return Resultado.Falha<Cliente>(resultadoCnpj.Erro!);
-        }
-
-        var cliente = new Cliente(nome, resultadoCnpj.Valor, true);
+        var cliente = new Cliente(nome, cnpj, true);
 
         return Resultado.Ok(cliente);
     }

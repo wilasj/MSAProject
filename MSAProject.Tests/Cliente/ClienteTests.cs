@@ -5,7 +5,7 @@ namespace MSAProject.Tests.Cliente;
 
 public class ClienteTests
 {
-    private static readonly string CnpjTeste = "22.879.135/0001-01";
+    private static readonly Cnpj CnpjTeste = new Cnpj("22.879.135/0001-01");
     
     [Fact]
     public void NomeVazio_DeveRetornar_Falha()
@@ -23,14 +23,6 @@ public class ClienteTests
 
         Assert.False(resultado.IsSucesso);
         Assert.Equal(ClienteErros.NomeVazio, resultado.Erro);
-    }
-
-    [Fact]
-    public void CnpjInvalido_DeveRetornar_Falha()
-    {
-        var resultado = Domain.Cliente.Cliente.Criar("MSA", "cnpj invalido");
-        
-        Assert.False(resultado.IsSucesso);
     }
 
     [Fact]
