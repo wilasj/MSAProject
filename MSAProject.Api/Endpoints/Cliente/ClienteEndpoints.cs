@@ -32,7 +32,7 @@ internal static class ClienteEndpoints
 
             var resultado = await handler.Handle(command, token);
 
-            return !resultado.IsSucesso ? Results.BadRequest(resultado.Erro) : Results.Ok(resultado.Valor);
+            return !resultado.IsSucesso ? Results.NotFound(resultado.Erro) : Results.Ok(resultado.Valor);
         });
     }
 }
