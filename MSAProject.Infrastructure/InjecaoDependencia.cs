@@ -5,7 +5,7 @@ using NHibernate;
 
 namespace MSAProject.Infrastructure;
 
-public static class DependencyInjection
+public static class InjecaoDependencia
 {
     public static IServiceCollection AdicionaInfraestrutura(this IServiceCollection services)
     {

@@ -12,7 +12,7 @@ public class ArquiteturaTests
 {
     private static readonly Assembly AssemblyDominio = typeof(Cnpj).Assembly;
     private static readonly Assembly AssemblyAplicacao = typeof(ICommand).Assembly;
-    private static readonly Assembly AssemblyInfraestrutura = typeof(DependencyInjection).Assembly;
+    private static readonly Assembly AssemblyInfraestrutura = typeof(InjecaoDependencia).Assembly;
     private static readonly Assembly AssemblyComum = typeof(Resultado).Assembly;
     
     /// <summary>

@@ -1,6 +1,6 @@
 namespace MSAProject.Application;
 
-public static class DependencyInjection
+public static class InjecaoDependencia
 {
     
 }
