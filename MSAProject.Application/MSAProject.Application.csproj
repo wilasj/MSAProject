@@ -1,6 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
+    <InternalsVisibleTo Include="MSAProject.Tests" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\MSAProject.Common\MSAProject.Common.csproj" />
     <ProjectReference Include="..\MSAProject.Domain\MSAProject.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
   </ItemGroup>
 </Project>
