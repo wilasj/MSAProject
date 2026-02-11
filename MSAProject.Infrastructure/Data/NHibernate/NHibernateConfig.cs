@@ -12,7 +12,7 @@ public static class NHibernateConfig
     {
         return Fluently
             .Configure()
-            .Database(SQLiteConfiguration.Standard.InMemory())
+            .Database(SQLiteConfiguration.Standard.UsingFile("database.db"))
             .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()))
             .ExposeConfiguration(cfg =>
             {
