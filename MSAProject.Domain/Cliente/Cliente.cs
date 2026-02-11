@@ -2,13 +2,16 @@ using MSAProject.Common;
 
 namespace MSAProject.Domain.Cliente;
 
-public sealed class Cliente
+public class Cliente
 {
-    public int Id { get; private set; }
-    public string NomeFantasia { get; private set; }
-    public Cnpj Cnpj { get; private set; }
-    public bool Ativo { get; private set; }
+    public virtual int Id { get; protected set; }
+    public virtual string NomeFantasia { get; protected set; }
+    public virtual Cnpj Cnpj { get; protected set; }
+    public virtual bool Ativo { get; protected set; }
 
+    //NHibernate precisa disso
+    protected Cliente(){}
+    
     private Cliente(string nomeFantasia, Cnpj cnpj, bool ativo)
     {
         NomeFantasia = nomeFantasia;

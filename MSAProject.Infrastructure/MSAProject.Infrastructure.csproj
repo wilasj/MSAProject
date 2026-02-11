@@ -3,6 +3,8 @@
     <PackageReference Include="FluentNHibernate" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="NHibernate" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" />
+    <PackageReference Include="System.Data.SQLite" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSAProject.Application\MSAProject.Application.csproj" />

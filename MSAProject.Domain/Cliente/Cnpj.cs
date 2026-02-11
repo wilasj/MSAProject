@@ -3,9 +3,9 @@ using MSAProject.Common;
 
 namespace MSAProject.Domain.Cliente;
 
-public sealed class Cnpj(string valor)
+public class Cnpj
 {
-    public string Valor { get; private set; } = valor;
+    public virtual string Valor { get; protected set; }
     
     //Esse regex retira somente pontuações, e não letras. Fiz isso pra poder conseguir validar corretamente
     //em casos onde o tamanho é correto, mas existem letras.
@@ -13,6 +13,13 @@ public sealed class Cnpj(string valor)
 
     public static string NormalizarCnpj(string cnpj) => Regex.Replace(cnpj, @"[^\d]", "");
     
+    protected Cnpj(){}
+    
+    private Cnpj(string valor)
+    {
+        Valor = valor;
+    }
+
     public static Resultado<Cnpj> Criar(string? cnpj)
     {
         if (string.IsNullOrEmpty(cnpj))

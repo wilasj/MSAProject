@@ -5,7 +5,7 @@ namespace MSAProject.Tests.Cliente;
 
 public class ClienteTests
 {
-    private static readonly Cnpj CnpjTeste = new Cnpj("22.879.135/0001-01");
+    private static readonly Cnpj CnpjTeste = Cnpj.Criar("22.879.135/0001-01").Valor;
     
     [Fact]
     public void NomeVazio_DeveRetornar_Falha()
