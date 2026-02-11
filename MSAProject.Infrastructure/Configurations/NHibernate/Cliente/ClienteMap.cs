@@ -1,9 +1,8 @@
 using FluentNHibernate.Mapping;
-using MSAProject.Domain.Cliente;
 
-namespace MSAProject.Infrastructure.Configurations.NHibernate;
+namespace MSAProject.Infrastructure.Configurations.NHibernate.Cliente;
 
-public class ClienteMap: ClassMap<Cliente>
+public class ClienteMap: ClassMap<Domain.Cliente.Cliente>
 {
     public ClienteMap()
     {
