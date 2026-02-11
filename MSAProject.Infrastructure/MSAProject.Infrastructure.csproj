@@ -1,2 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="NHibernate" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MSAProject.Application\MSAProject.Application.csproj" />
+  </ItemGroup>
 </Project>
